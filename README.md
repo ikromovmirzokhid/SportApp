@@ -1,4 +1,4 @@
-This is simple Sports app where you can choose your favorite spots team and look up their game history using https://www.thesportsdb.com/api.php APIs. 
+This is a simple Sports app where you can choose your favorite sports team and look up their game history using https://www.thesportsdb.com/api.php APIs. 
 
 This app is created using MVVM architecture
 For dependency injection used Dagger2
