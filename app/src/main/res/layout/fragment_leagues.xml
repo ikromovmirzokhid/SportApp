@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/baseAppColor">
+
+        <TextView
+            style="@style/Text.White"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxWidth="300dp"
+            android:text="Leagues"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/chooseFavoriteTeamTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Choose Your Favorite League"
+            android:textColor="@color/gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/filterTv"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_border_white_bg"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Filter"
+            android:textColor="#878B9B"
+            app:drawableStartCompat="@drawable/ic_baseline_filter_list_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chooseFavoriteTeamTv" />
+
+        <FrameLayout
+            android:id="@+id/countriesSpinnerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@id/filterTv"
+            app:layout_constraintTop_toBottomOf="@id/chooseFavoriteTeamTv">
+
+            <Spinner
+                android:id="@+id/countriesSpinner"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_blue_bg"
+                android:entries="@array/countries"
+                android:paddingEnd="15dp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/sportsSpinnerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@id/countriesSpinnerLayout"
+            app:layout_constraintTop_toBottomOf="@id/chooseFavoriteTeamTv">
+
+            <Spinner
+                android:id="@+id/sportsSpinner"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_blue_bg"
+                android:entries="@array/countries"
+                android:paddingEnd="15dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/chooseFavoriteTeamTv"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:background="@color/mainBackground"
+            app:layout_constraintTop_toBottomOf="@id/chooseFavoriteTeamTv">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/leaguesRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/leagues_list_item" />
+
+            <include
+                android:id="@+id/secondaryView"
+                layout="@layout/data_not_found_layout" />
+
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:adSize="BANNER"
+                app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

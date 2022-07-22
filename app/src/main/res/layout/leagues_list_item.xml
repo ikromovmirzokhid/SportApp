@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/leagueItem"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/leagueImgViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#000000"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        <me.relex.circleindicator.CircleIndicator-->
+        <!--            android:id="@+id/indicator"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="48dp"-->
+        <!--            app:ci_animator="R.animator.scale_with_alpha"-->
+        <!--            app:ci_animator_reverse="0"-->
+        <!--            app:ci_drawable="@drawable/white_radius"-->
+        <!--            app:ci_drawable_unselected="R.drawable.white_radius"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/leagueImgViewPager" />-->
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/indicator"
+            app:layout_constraintBottom_toBottomOf="@id/leagueImgViewPager"
+            app:ci_width="5dp"
+            app:ci_height="5dp"
+            app:ci_margin="5dp"
+            app:ci_gravity="center"
+            app:ci_orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+
+        <TextView
+            android:id="@+id/sportType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_gray_bg"
+            android:padding="7dp"
+            android:text="Soccer"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@id/leagueImgViewPager"
+            app:layout_constraintLeft_toLeftOf="@id/leagueImgViewPager" />
+
+        <TextView
+            android:id="@+id/leagueName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:text="English Premier League"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/leagueImgViewPager" />
+
+
+        <TextView
+            android:id="@+id/leagueDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:maxHeight="95dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:text="The British Touring Car Championship is a touring car racing series held each year in the United Kingdom, currently organized and administered by ToCA. It was established in 1958 as the British Saloon Car Championship and was renamed as the British Touring Car Championship in 1987. The championship has been run to various national and international regulations over the years including FIA Group 2, FIA Group 5, FIA Group 1, FIA Group A, FIA Super Touring and FIA Super 2000. A lower-key Group N series for production cars ran from 2000 until 2003.\r\n\r\nThe championship was initially run with a mix of classes, divided according to engine capacity, racing simultaneously. This often meant that a driver who chose the right class could win the overall championship without any chance of overall race wins, thereby devaluing the title for the spectators – for example, in the 1980s Chris Hodgetts won two overall titles in a small Toyota Corolla p"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/leagueName" />
+
+        <View
+            android:id="@+id/separatorLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#ECE8E8"
+            app:layout_constraintTop_toBottomOf="@id/leagueDesc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separatorLine">
+
+            <ImageView
+                android:id="@+id/website"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/web"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/facebook"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/instagram"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/instagram"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/twitter"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

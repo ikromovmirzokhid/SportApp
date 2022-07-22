@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "404517184724",
+    "project_id": "sportapp-8ca9d",
+    "storage_bucket": "sportapp-8ca9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404517184724:android:ad45a8dd5d374e14624741",
+        "android_client_info": {
+          "package_name": "com.imb.sportapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404517184724-kvpq7390m7r9ogj4mf7tt7pt99qf9mpl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKsI0l56OJezJb0olPIlgDGMQ_SZcP54w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404517184724-kvpq7390m7r9ogj4mf7tt7pt99qf9mpl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

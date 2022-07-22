@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/baseAppColor">
+
+        <ImageView
+            android:id="@+id/arrowBack"
+            style="@style/BackArrowWhite" />
+
+        <TextView
+            style="@style/Text.White"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxWidth="300dp"
+            android:text="Choose Your Favorite Team"
+            android:textSize="18sp" />
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/searchBtn"-->
+        <!--            android:layout_width="22dp"-->
+        <!--            android:layout_height="22dp"-->
+        <!--            android:layout_gravity="end|center_vertical"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:layout_marginRight="16dp"-->
+        <!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+        <!--            android:clickable="true"-->
+        <!--            android:focusable="true"-->
+        <!--            android:src="@drawable/ic_search_white"-->
+        <!--            android:visibility="gone" />-->
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/mainBackground">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/teamsRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/team_list_item" />
+
+        <include
+            android:id="@+id/secondaryView"
+            layout="@layout/data_not_found_layout" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </FrameLayout>
+</LinearLayout>
